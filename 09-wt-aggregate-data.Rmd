@@ -401,8 +401,8 @@ tidy_df %>%
   ) +
   scale_y_continuous(labels = scales::percent) + # makes labels present as percentages
   scale_fill_dataedu() +
-  theme(legend.position = "none") +
-  theme_dataedu()
+  theme_dataedu() +
+  theme(legend.position = "none")
 ```
 
 When we look at these data, the district looks very diverse. Almost **40% of students are Black** and around **36% are White.**
