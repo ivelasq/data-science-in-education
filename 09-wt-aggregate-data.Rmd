@@ -1,3 +1,6 @@
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(fig.align = "center", dpi = 300, fig.width = 5, fig.path = "./man/figures/")
+```
 # Walkthrough 3: Using School-Level Aggregate Data to Illuminate Educational Inequities {#c09}
 
 ## Vocabulary
@@ -473,8 +476,8 @@ tidy_df %>%
   ) +
   scale_y_continuous(labels = scales::percent) +
   scale_fill_dataedu() +
-  theme(legend.position = "none") +
-  theme_dataedu()
+  theme_dataedu() +
+  theme(legend.position = "none")
 ```
 
 **8% of White students** attend high poverty schools, compared to **43% of Black students, 39% of Hispanic students, 28% of Asian students, and 45% of Native American students.** We can conclude these students are disproportionally attending high poverty schools.

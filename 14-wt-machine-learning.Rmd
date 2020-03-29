@@ -1,3 +1,6 @@
+```{r, setup, include=FALSE, set.seed(2020)}
+knitr::opts_chunk$set(fig.align = "center", dpi = 300, fig.width = 5, fig.path = "./man/figures/", cache = T)
+```
 # Walkthrough 8: Predicting Students' Final Grades Using Machine Learning Methods with Online Course Data {#c14}
 
 ## Vocabulary
