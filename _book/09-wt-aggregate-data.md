@@ -1,3 +1,4 @@
+
 # Walkthrough 3: Using School-Level Aggregate Data to Illuminate Educational Inequities {#c09}
 
 ## Vocabulary
@@ -86,16 +87,16 @@ tibble(
 ## # A tibble: 10 x 3
 ##    student school test_score
 ##    <chr>   <chr>       <int>
-##  1 a       k              27
-##  2 b       l              86
-##  3 c       m              21
-##  4 d       n              87
-##  5 e       o              64
-##  6 f       k              16
-##  7 g       l              35
-##  8 h       m              41
-##  9 i       n              69
-## 10 j       o              48
+##  1 a       k              38
+##  2 b       l              80
+##  3 c       m              20
+##  4 d       n              31
+##  5 e       o             100
+##  6 f       k              12
+##  7 g       l              21
+##  8 h       m               7
+##  9 i       n              75
+## 10 j       o              64
 ```
 
 Aggregate data totals up a variable--the variable `test_score` in this case--to "hide" the student-level information. The rows of the resulting dataset represent a group. The group in our example is the `school` variable:
@@ -116,11 +117,11 @@ tibble(
 ## # A tibble: 5 x 2
 ##   school mean_score
 ##   <chr>       <dbl>
-## 1 k            76  
-## 2 l            36.5
-## 3 m            53  
-## 4 n            85.5
-## 5 o            15.5
+## 1 k              16
+## 2 l              65
+## 3 m              14
+## 4 n              46
+## 5 o              69
 ```
 
 Notice here that this dataset no longer identifies individual students. 
@@ -443,12 +444,12 @@ tidy_df %>%
   ) +
   scale_y_continuous(labels = scales::percent) + # makes labels present as percentages
   scale_fill_dataedu() +
-  theme(legend.position = "none") +
-  theme_dataedu()
+  theme_dataedu() +
+  theme(legend.position = "none")
 ```
 
 <div class="figure" style="text-align: center">
-<img src="09-wt-aggregate-data_files/figure-html/fig9-1-1.png" alt="Percentage of Population by Subgroup" width="672" />
+<img src="./man/figures/fig9-1-1.png" alt="Percentage of Population by Subgroup" width="1500" />
 <p class="caption">(\#fig:fig9-1)Percentage of Population by Subgroup</p>
 </div>
 
@@ -500,7 +501,7 @@ merged_df %>%
 ```
 
 <div class="figure" style="text-align: center">
-<img src="09-wt-aggregate-data_files/figure-html/fig9-2-1.png" alt="Count of Schools by White Population" width="672" />
+<img src="./man/figures/fig9-2-1.png" alt="Count of Schools by White Population" width="1500" />
 <p class="caption">(\#fig:fig9-2)Count of Schools by White Population</p>
 </div>
 
@@ -535,12 +536,12 @@ tidy_df %>%
   ) +
   scale_y_continuous(labels = scales::percent) +
   scale_fill_dataedu() +
-  theme(legend.position = "none") +
-  theme_dataedu()
+  theme_dataedu() +
+  theme(legend.position = "none")
 ```
 
 <div class="figure" style="text-align: center">
-<img src="09-wt-aggregate-data_files/figure-html/fig9-3-1.png" alt="Distribution of Subgroups in High Poverty Schools" width="672" />
+<img src="./man/figures/fig9-3-1.png" alt="Distribution of Subgroups in High Poverty Schools" width="1500" />
 <p class="caption">(\#fig:fig9-3)Distribution of Subgroups in High Poverty Schools</p>
 </div>
 
@@ -566,7 +567,7 @@ merged_df %>%
 ```
 
 <div class="figure" style="text-align: center">
-<img src="09-wt-aggregate-data_files/figure-html/fig9-4-1.png" alt="FRPL Percentage vs. White Percentage" width="672" />
+<img src="./man/figures/fig9-4-1.png" alt="FRPL Percentage vs. White Percentage" width="1500" />
 <p class="caption">(\#fig:fig9-4)FRPL Percentage vs. White Percentage</p>
 </div>
 

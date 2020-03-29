@@ -666,7 +666,7 @@ If the package is on CRAN we can install it by running the following code in the
 <p>You <em>can</em> run the <code>install.packages()</code> functions within an <code>.R</code> script!
 However if you choose to do this, please make sure to comment out the line(s) of code that install packages, as you will likely not need to re-install packages each time you run a script.</p>
 <p>If you do not want to write code for installing packages, you can also navigate to the Packages pane, click “Install”, and then search for and install one or more packages.</p>
-<div class="figure" style="text-align: center"><span id="fig:fig6-1"></span>
+<div class="figure"><span id="fig:fig6-1"></span>
 <img src="man/figures/Figure%206.1.png" alt="Image of the Packages pane, which is found in the bottom right corner of the RStudio IDE, along with the Files, Plots, Help, and Viewer panes" width="468" />
 <p class="caption">
 Figure 6.1: Image of the Packages pane, which is found in the bottom right corner of the RStudio IDE, along with the Files, Plots, Help, and Viewer panes
@@ -805,7 +805,7 @@ This means that instead of writing a function to do a common data analysis task,
 One of the functions that can accomplish the task of creating a new variable out of existing variables is called <code>mutate()</code>.
 What happens when you type <code>?mutate</code> (or <code>?mutate()</code>) into the Console and hit <code>Enter</code>?
 We’ve gotten one of our first error messages!</p>
-<div class="figure" style="text-align: center"><span id="fig:fig6-2"></span>
+<div class="figure"><span id="fig:fig6-2"></span>
 <img src="man/figures/Figure%206.2.png" alt="Error message when running ?mutate" width="550" />
 <p class="caption">
 Figure 6.2: Error message when running ?mutate
@@ -855,7 +855,7 @@ We’ll cover functions in greater depth in subsequent chapters, but for now all
 <li>What information is available in the Help documentation?</li>
 <li>Are there any examples from the Help documentation that seem similar to what you’re trying to accomplish? For example, this seems somewhat related to what we’re trying to do:</li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:fig6-3"></span>
+<div class="figure"><span id="fig:fig6-3"></span>
 <img src="man/figures/Figure%206.3.png" alt="Example from the `coalesce()` Help documentation" width="530" />
 <p class="caption">
 Figure 6.3: Example from the <code>coalesce()</code> Help documentation
@@ -906,7 +906,7 @@ Run the following code in the <strong>RStudio Console</strong>:</p>
 <div id="function-conflicts-between-packages" class="section level4">
 <h4><span class="header-section-number">6.5.1.1</span> Function Conflicts between Packages</h4>
 <p>In your Console you may have noticed the following message:</p>
-<div class="figure" style="text-align: center"><span id="fig:fig6-4"></span>
+<div class="figure"><span id="fig:fig6-4"></span>
 <img src="man/figures/Figure%206.4.png" alt="List of attached packages and associated conflicts when loading the Tidyverse" width="722" />
 <p class="caption">
 Figure 6.4: List of attached packages and associated conflicts when loading the Tidyverse
@@ -950,7 +950,7 @@ When we have conflicting function names from different packages we can tell R wh
 <a class="sourceLine" id="cb18-3" title="3">ma_data_init &lt;-<span class="st"> </span>dataedu<span class="op">::</span>ma_data_init</a></code></pre></div>
 <p>Each of the three code examples above look slightly different, but two of them do almost the exact same thing. The first example provided loads the data into our R environment, but not in a format that’s immediately useful to us. The second and third examples read in the data and assign it to a variable,<code>ma_data</code> and <code>ma_data_init</code> respectively.</p>
 <p>In our Environment pane we can see that each of the data types has been brought into R, and even click on the table icon to get an interactive table (the data set is rather large, so RStudio may lag slightly as you open the table and manipulate it).</p>
-<div class="figure" style="text-align: center"><span id="fig:fig6-5"></span>
+<div class="figure"><span id="fig:fig6-5"></span>
 <img src="man/figures/Figure%206.5.png" alt="Loading the `ma_data` Dataset" width="830" />
 <p class="caption">
 Figure 6.5: Loading the <code>ma_data</code> Dataset
@@ -1041,7 +1041,7 @@ We use the pipe operator throughout this text because we also heavily rely on us
 <p><em>Note: As you progress in your R learning journey you will likely find that you need to move well beyond the Tidyverse for accomplishing your analytical goals - and that’s OK!</em>
 <em>We like the Tidyverse for teaching and learning because it relies on the same syntax across packages, so as you learn how to use functions within one package, you’re learning the syntax for functions in other Tidyverse packages.</em></p>
 <p>It’s worth taking a few moments to talk about the pipe operator and its package. The pipe operator first appeared in the {magrittr} package, and is a play on a famous painting by the artist Magritte, who painted The Treachery of Images. In these images he would paint an object, such as a pipe, and accompany it with the text “Ceci n’est pas une pipe,” which is French for “This is not a pipe.”</p>
-<div class="figure" style="text-align: center"><span id="fig:fig6-6"></span>
+<div class="figure"><span id="fig:fig6-6"></span>
 <img src="man/figures/Figure%206.6.png" alt="The Treachery of Images by Magritte" width="960" />
 <p class="caption">
 Figure 6.6: The Treachery of Images by Magritte
@@ -1300,9 +1300,7 @@ gitbook.start({
 "download": null,
 "toc": {
 "collapse": "section"
-},
-"fig_height": 5.3,
-"fig_width": 8.5
+}
 });
 });
 </script>

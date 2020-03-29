@@ -57,6 +57,6 @@ dt {
   color: #003f5c;
 }
 
-.book .book-summary .booksearch li a {
+.book .book-summary input.search-box.form-control li a {
   color: #ffffff;
 }

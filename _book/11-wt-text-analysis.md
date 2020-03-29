@@ -1,3 +1,4 @@
+
 # Walkthrough 5: Text Analysis With Social Media Data {#c11}
 
 ## Vocabulary 
@@ -323,7 +324,7 @@ pos_tokens_count %>%
 ```
 
 <div class="figure" style="text-align: center">
-<img src="11-wt-text-analysis_files/figure-html/fig11-1-1.png" alt="Count of Words Associated with Positivity" width="672" />
+<img src="./man/figures/fig11-1-1.png" alt="Count of Words Associated with Positivity" width="1500" />
 <p class="caption">(\#fig:fig11-1)Count of Words Associated with Positivity</p>
 </div>
 

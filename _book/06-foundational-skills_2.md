@@ -145,7 +145,7 @@ However if you choose to do this, please make sure to comment out the line(s) of
 
 If you do not want to write code for installing packages, you can also navigate to the Packages pane, click "Install", and then search for and install one or more packages. 
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 6.1.png" alt="Image of the Packages pane, which is found in the bottom right corner of the RStudio IDE, along with the Files, Plots, Help, and Viewer panes" width="468" />
 <p class="caption">(\#fig:fig6-1)Image of the Packages pane, which is found in the bottom right corner of the RStudio IDE, along with the Files, Plots, Help, and Viewer panes</p>
 </div>
@@ -311,7 +311,7 @@ One of the functions that can accomplish the task of creating a new variable out
 What happens when you type `?mutate` (or `?mutate()`) into the Console and hit `Enter`?
 We've gotten one of our first error messages!
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 6.2.png" alt="Error message when running ?mutate" width="550" />
 <p class="caption">(\#fig:fig6-2)Error message when running ?mutate</p>
 </div>
@@ -365,7 +365,7 @@ Take a moment to think through the following questions:
 * What information is available in the Help documentation?
 * Are there any examples from the Help documentation that seem similar to what you're trying to accomplish? For example, this seems somewhat related to what we're trying to do:
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 6.3.png" alt="Example from the `coalesce()` Help documentation" width="530" />
 <p class="caption">(\#fig:fig6-3)Example from the `coalesce()` Help documentation</p>
 </div>
@@ -427,7 +427,7 @@ library(skimr)
 
 In your Console you may have noticed the following message: 
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 6.4.png" alt="List of attached packages and associated conflicts when loading the Tidyverse" width="722" />
 <p class="caption">(\#fig:fig6-4)List of attached packages and associated conflicts when loading the Tidyverse</p>
 </div>
@@ -491,7 +491,7 @@ Each of the three code examples above look slightly different, but two of them d
 
 In our Environment pane we can see that each of the data types has been brought into R, and even click on the table icon to get an interactive table (the data set is rather large, so RStudio may lag slightly as you open the table and manipulate it).
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 6.5.png" alt="Loading the `ma_data` Dataset" width="830" />
 <p class="caption">(\#fig:fig6-5)Loading the `ma_data` Dataset</p>
 </div>
@@ -606,7 +606,7 @@ _We like the Tidyverse for teaching and learning because it relies on the same s
 
 It's worth taking a few moments to talk about the pipe operator and its package. The pipe operator first appeared in the {magrittr} package, and is a play on a famous painting by the artist Magritte, who painted The Treachery of Images. In these images he would paint an object, such as a pipe, and accompany it with the text "Ceci n'est pas une pipe," which is French for "This is not a pipe." 
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 6.6.png" alt="The Treachery of Images by Magritte" width="960" />
 <p class="caption">(\#fig:fig6-6)The Treachery of Images by Magritte</p>
 </div>

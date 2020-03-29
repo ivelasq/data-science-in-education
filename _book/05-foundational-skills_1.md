@@ -46,7 +46,7 @@ If you do have issues, consider [the Data Carpentry page](https://datacarpentry.
 Now that we've installed both R and RStudio, we will be accessing R _through_ RStudio. 
 One of the most reliable ways to tell if you're opening R or RStudio is to look at the icons: 
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.1.png" alt="Icons" width="479" />
 <p class="caption">(\#fig:fig5-1)Icons</p>
 </div>
@@ -74,7 +74,7 @@ We have chosen to use RStudio in this text in order to standardize the experienc
 
 When we open RStudio for the first time, we're should see something similar to this:
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.2.png" alt="RStudio Layout" width="1184" />
 <p class="caption">(\#fig:fig5-2)RStudio Layout</p>
 </div>
@@ -88,7 +88,7 @@ When we create a new file, such as an R script, an R Markdown file, or a Shiny a
 The source pane should show up as a square in the top left.
 We can open up an `.R` script in the source pane by going to File, selecting New File, and then selecting R Script:
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.3.png" alt="Creating a new R Script in RStudio" width="791" />
 <p class="caption">(\#fig:fig5-3)Creating a new R Script in RStudio</p>
 </div>
@@ -101,7 +101,7 @@ One of the balances we've tried to strike in this text is a balance between best
 A best practice for your _workflow_ is to ensure that you're starting with a blank slate every time you open R (through RStudio). 
 To accomplish this, go to Tools and select Global Options from the dropdown menu.
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.4.png" alt="Selecting Global Options from the Tool Dropdown Menu" width="255" />
 <p class="caption">(\#fig:fig5-4)Selecting Global Options from the Tool Dropdown Menu</p>
 </div>
@@ -110,7 +110,7 @@ The General tab will open, with several checkboxes selected and unselected.
 The most important thing you can do is select "Never" next to the **Save workspace to .RData on exit:** prompt.
 After selecting "Never", go through and check and uncheck boxes so that your General tab looks like this: 
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.5.png" alt="General tab from Global Options" width="649" />
 <p class="caption">(\#fig:fig5-5)General tab from Global Options</p>
 </div>
@@ -129,7 +129,7 @@ If at any point you find that one of your panes seems to have "disappeared," one
 Let's look at the Environment pane as an example.
 If the Environment pane has been minimized, we'll see something like this:  
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.6.png" alt="RStudio layout with the Environment Pane Minimized" width="1363" />
 <p class="caption">(\#fig:fig5-6)RStudio layout with the Environment Pane Minimized</p>
 </div>
@@ -140,14 +140,14 @@ If you click on the icon of the large square in the top right of the Environment
 
 If the Environment pane has somehow been closed, you can recover it by going to the View menu, selecting Panes, and then selecting Pane Layout, like so: 
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.7.png" alt="Accessing the Pane Layout from the View Dropdown Menu" width="456" />
 <p class="caption">(\#fig:fig5-7)Accessing the Pane Layout from the View Dropdown Menu</p>
 </div>
 
 When we select Pane Layout, we'll see this: 
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.8.png" alt="Pane Layout options within RStudio" width="650" />
 <p class="caption">(\#fig:fig5-8)Pane Layout options within RStudio</p>
 </div>
@@ -172,7 +172,7 @@ We'll spend a little time practicing running code in the Console by exploring so
 In the Console, type `3 + 4` and hit `Enter`. 
 You should see the following:  
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.9.png" alt="Using the Console as a Calculator" width="208" />
 <p class="caption">(\#fig:fig5-9)Using the Console as a Calculator</p>
 </div>
@@ -191,7 +191,7 @@ print("I am learning R")
 
 We should see this in the Console:
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.10.png" alt="Printing Text to the Console" width="255" />
 <p class="caption">(\#fig:fig5-10)Printing Text to the Console</p>
 </div>
@@ -207,7 +207,7 @@ print("This is going to cause a problem"
 Make sure that you left off the closing parentheses! 
 What you'll see in the Console is: 
 
-<div class="figure" style="text-align: center">
+<div class="figure">
 <img src="./man/figures/Figure 5.11.png" alt="Incomplete Parentheses Change what R Expects Next" width="407" />
 <p class="caption">(\#fig:fig5-11)Incomplete Parentheses Change what R Expects Next</p>
 </div>

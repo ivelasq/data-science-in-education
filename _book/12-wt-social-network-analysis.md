@@ -1,3 +1,4 @@
+
 # Walkthrough 6: Exploring Relationships Using Social Network Analysis With Social Media Data {#c12}
 
 ## Vocabulary
@@ -117,20 +118,20 @@ An edgelist looks like the following, where the sender denotes who is initiating
 
 ```
 ## # A tibble: 12 x 2
-##    sender                     receiver              
-##    <chr>                      <chr>                 
-##  1 al-Sawaya, Nabeeha         Nuno Villanueva, Angie
-##  2 Tewolde, Jernayiah         Cloud, Desiree        
-##  3 Tewolde, Jernayiah         Chase, Timothy        
-##  4 Castillo-Halvorssen, Scott Cloud, Desiree        
-##  5 Castillo-Halvorssen, Scott Nuno Villanueva, Angie
-##  6 Castillo-Halvorssen, Scott Mattie, Logan         
-##  7 Vigil, Tiffany             Chase, Timothy        
-##  8 Vigil, Tiffany             Martel, Alondra       
-##  9 Vigil, Tiffany             Mattie, Logan         
-## 10 Proctor, Tina              al-Imam, Samraa       
-## 11 Ewald, Audrey              Chase, Timothy        
-## 12 Ewald, Audrey              al-Imam, Samraa
+##    sender               receiver          
+##    <chr>                <chr>             
+##  1 Kargarzadeh, Makayla Gomez, Andrew     
+##  2 Miera, Madeline      Rodriguez, Gabriel
+##  3 Miera, Madeline      Swazo, Ariana     
+##  4 Weber, Macennia      Rodriguez, Gabriel
+##  5 Weber, Macennia      Gomez, Andrew     
+##  6 Weber, Macennia      al-Halaby, Hamdi  
+##  7 Chen, Daniel         Swazo, Ariana     
+##  8 Chen, Daniel         Fritz, Shane      
+##  9 Chen, Daniel         al-Halaby, Hamdi  
+## 10 Baca, Karla          Newhouse, Courtney
+## 11 Rea, Lauren          Swazo, Ariana     
+## 12 Rea, Lauren          Newhouse, Courtney
 ```
 
 In this edgelist, the sender could indicate, for example, someone who nominates someone else (the receiver) as someone they go to for help. The sender could also indicate someone who interacted with the receiver, such as by recognizing one of their tweets with a favorite (or a mention). In the following steps, we will work to create an edgelist from the data from #tidytuesday on Twitter.
@@ -312,7 +313,7 @@ g %>%
 ```
 
 <div class="figure" style="text-align: center">
-<img src="12-wt-social-network-analysis_files/figure-html/fig12-1-1.png" alt="Network Graph" width="672" />
+<img src="./man/figures/fig12-1-1.png" alt="Network Graph" width="1500" />
 <p class="caption">(\#fig:fig12-1)Network Graph</p>
 </div>
 
@@ -334,7 +335,7 @@ g %>%
 ```
 
 <div class="figure" style="text-align: center">
-<img src="12-wt-social-network-analysis_files/figure-html/fig12-2-1.png" alt="Network Graph with Centrality" width="672" />
+<img src="./man/figures/fig12-2-1.png" alt="Network Graph with Centrality" width="1500" />
 <p class="caption">(\#fig:fig12-2)Network Graph with Centrality</p>
 </div>
 
@@ -476,20 +477,20 @@ summary(model1)
 ## lm(formula = yvar2 ~ yvar1 + exposure_mean, data = final_data)
 ## 
 ## Residuals:
-##       1       2       3       4       5       6 
-##  0.0295 -0.0932  0.0943 -0.0273 -0.0255  0.0222 
+##        1        2        3        4        5        6 
+##  0.02946 -0.09319  0.09429 -0.02730 -0.02548  0.02222 
 ## 
 ## Coefficients:
 ##               Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)     0.1161     0.0345    3.37    0.043 *  
-## yvar1           0.6760     0.0241   28.09  9.9e-05 ***
-## exposure_mean   0.1254     0.0361    3.47    0.040 *  
+## (Intercept)    0.11614    0.03445   3.371   0.0434 *  
+## yvar1          0.67598    0.02406  28.092  9.9e-05 ***
+## exposure_mean  0.12542    0.03615   3.470   0.0403 *  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.0823 on 3 degrees of freedom
-## Multiple R-squared:  0.998,	Adjusted R-squared:  0.997 
-## F-statistic:  945 on 2 and 3 DF,  p-value: 6.31e-05
+## Residual standard error: 0.08232 on 3 degrees of freedom
+## Multiple R-squared:  0.9984,	Adjusted R-squared:  0.9974 
+## F-statistic: 945.3 on 2 and 3 DF,  p-value: 6.306e-05
 ```
 
 So, the influence model is used to study a key process for social network analysis, but it is one that is useful, because you can quantify, given what you measure and how you measure it, *the network effect*, something that is sometimes not considered, especially in education (Frank, 2009). It's also fundamentally a regression. That's really it, as the majority of the work goes into calculating the exposure term.
