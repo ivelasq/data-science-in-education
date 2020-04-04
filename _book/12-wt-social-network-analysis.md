@@ -133,43 +133,23 @@ An edgelist looks like the following, where the `sender` (sometimes called the "
 
 ```
 ## # A tibble: 12 x 2
-<<<<<<< HEAD
-##    sender               receiver          
-##    <chr>                <chr>             
-##  1 Kargarzadeh, Makayla Gomez, Andrew     
-##  2 Miera, Madeline      Rodriguez, Gabriel
-##  3 Miera, Madeline      Swazo, Ariana     
-##  4 Weber, Macennia      Rodriguez, Gabriel
-##  5 Weber, Macennia      Gomez, Andrew     
-##  6 Weber, Macennia      al-Halaby, Hamdi  
-##  7 Chen, Daniel         Swazo, Ariana     
-##  8 Chen, Daniel         Fritz, Shane      
-##  9 Chen, Daniel         al-Halaby, Hamdi  
-## 10 Baca, Karla          Newhouse, Courtney
-## 11 Rea, Lauren          Swazo, Ariana     
-## 12 Rea, Lauren          Newhouse, Courtney
-```
-
-In this edgelist, the sender could indicate, for example, someone who nominates someone else (the receiver) as someone they go to for help. The sender could also indicate someone who interacted with the receiver, such as by recognizing one of their tweets with a favorite (or a mention). In the following steps, we will work to create an edgelist from the data from #tidytuesday on Twitter.
-=======
-##    sender           receiver           
-##    <chr>            <chr>              
-##  1 el-Zia, Tareef   Cannon, Brian      
-##  2 Mcghee, Du Shawn Alger, Alexandra   
-##  3 Mcghee, Du Shawn Coop, Chantra      
-##  4 Hubbard, Classie Alger, Alexandra   
-##  5 Hubbard, Classie Cannon, Brian      
-##  6 Hubbard, Classie Snyder, Abigale    
-##  7 Green, Zachary   Coop, Chantra      
-##  8 Green, Zachary   Scarborough, Chelsi
-##  9 Green, Zachary   Snyder, Abigale    
-## 10 Holland, Sydney  al-Hariri, Shafeeq 
-## 11 Garcia, Ariyelle Coop, Chantra      
-## 12 Garcia, Ariyelle al-Hariri, Shafeeq
+##    sender             receiver                  
+##    <chr>              <chr>                     
+##  1 Davis, Richard     Kounnas, Devonte          
+##  2 Hofmeister, Kalli  Hopping-Merlino, Elizabeth
+##  3 Hofmeister, Kalli  Ragona, Brandon           
+##  4 Graves, Cory       Hopping-Merlino, Elizabeth
+##  5 Graves, Cory       Kounnas, Devonte          
+##  6 Graves, Cory       Plenty Wolf, Ariana       
+##  7 al-Farhat, Humaina Ragona, Brandon           
+##  8 al-Farhat, Humaina Hinton, Robert            
+##  9 al-Farhat, Humaina Plenty Wolf, Ariana       
+## 10 el-Bahri, Hudhaifa Breed, Veronica           
+## 11 Torres, Elizabeth  Ragona, Brandon           
+## 12 Torres, Elizabeth  Breed, Veronica
 ```
 
 In this edgelist, the `sender` column might identify someone who nominates another  (the receiver) as someone they go to for help. The sender might also identify someone who interacts with the receiver in other ways, like "liking" or "mentioning" their tweets. In the following steps, we will work to create an edgelist from the data from #tidytuesday on Twitter.
->>>>>>> origin/master
 
 ### Extracting Mentions
 
@@ -349,15 +329,7 @@ g %>%
   theme_graph()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig12-1-1.png" alt="Network Graph" width="1500" />
-=======
-<div class="figure">
-<img src="12-wt-social-network-analysis_files/figure-html/fig12-1-1.png" alt="Network Graph" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig12-1)Network Graph</p>
-</div>
+![(\#fig:fig12-1)Network Graph](./man/figures/fig12-1-1.png)
 
 Finally, let's size the points based on a measure of centrality. A common way to do this is to measure how influential an individual may be based on the interactions observed.
 
@@ -376,192 +348,12 @@ g %>%
   theme_graph()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig12-2-1.png" alt="Network Graph with Centrality" width="1500" />
-=======
-<div class="figure">
-<img src="12-wt-social-network-analysis_files/figure-html/fig12-2-1.png" alt="Network Graph with Centrality" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig12-2)Network Graph with Centrality</p>
-</div>
+![(\#fig:fig12-2)Network Graph with Centrality](./man/figures/fig12-2-1.png)
 
 There is much more you can do with {ggraph} (and {tidygraph}); check out the {ggraph} tutorial here: [https://ggraph.data-imaginist.com/](https://ggraph.data-imaginist.com/)
 
 ## Conclusion
 
-<<<<<<< HEAD
-In this chapter, we used social media data (from the #tidytuesday hashtag) to prepare and visualize social network data. This is a powerful technique; one that can reveal who is interacting with whom, and one that can begin to suggest why.
-
-<!-- Wondering if we need to do more with the visualizations do begin so that this can be more warranted. -->
-
-Behind these visualizations, though, there are also statistical models and methods that can help to understand what is going on with respect to particular relationships in a network in additional ways.
-
-One way to consider these models and methods is in terms of two *processes* at play in our relationships (cite). These two processes are commonly (though not exclusively) the focus of statistical analyses of networks. In addition to not being exclusive, they do not interact independently: they affect each other reciprocally (Xu, Frank, & Penuel, 2018). They are:
-
-- *Selection*: the processes regarding who chooses to have a relationship with whom
-- *Influence*: the processes regarding how who we have relationships with affects our behavior
-
-While these are complex, they can be studied with the type of data collected from asking people about their relationships (and possibly asking them about or studying their behavior--or measuring some outcome). Happily, the use of these methods has expanded along with R: many of the best tools for studying social networks are in the form of long-standing R packages. Additionally, while there are many potential nuances to studying selection and influence, these are models that can fundamentally be carried out with regression, or the linear model (or extensions of it). We describe these in the *Technical Appendix* for this chapter, as they do not use the tidytuesday dataset and are likely to be of interest to readers only after having mastered preparing and visualizing network data.
-
-## Technical Appendix: Influence and Selection Models
-
-As noted above, there is much more to understanding interactions, and network analysis, beyond creating edgelists and visualizing network data (through the use of an edgelist). Two processes that are particularly important (and able to be studied with network data using R) are for influence and selection.
-
-### An Example of Influence
-
-First, let's look at an example of influence. To do so, let's create three different data frames. Here is what they should, at the end of the process, contain:
-
-- A data frame indicating who the *nominator* and *nominee* for the relation (i.e., if Stefanie says that José is her friend, then Stefanie is the nominator and José the nominee) - as well as an optional variable indicating the weight, or strength, of their relation.
-- This data frame and its type can be considered the basis for many types of social network analysis and is a common structure for network data: it is an *edgelist*.
-- Data frames indicating the values of some behavior - an outcome - at two different time points.
-
-In this example, we create some example data that can be used to explore questions about how influence works.
-
-Let's take a look at the merged data. What this data now contains is the first data frame, `data1`, with each nominees' outcome at time 1 (`yvar1`). Note that we will find each nominators' outcome at time 2 later on.
-
-
-```r
-data1 <-
-  data.frame(
-    nominator = c(2, 1, 3, 1, 2, 6, 3, 5, 6, 4, 3, 4),
-    nominee = c(1, 2, 2, 3, 3, 3, 4, 4, 4, 5, 6, 6),
-    relate = c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
-  )
-
-data2 <-
-  data.frame(nominee = c(1, 2, 3, 4, 5, 6),
-             yvar1 = c(2.4, 2.6, 1.1, -0.5, -3, -1))
-
-data3 <-
-  data.frame(nominator = c(1, 2, 3, 4, 5, 6),
-             yvar2 = c(2, 2, 1, -0.5, -2, -0.5))
-```
-
-### Joining the Data
-
-Next, we'll join the data into one data frame. Note that while this is sometimes tedious and time-consuming, especially with large sources of network data, it is a key step for being able to carry out network analysis - often, even for creating visualizations that are informative.
-
-
-```r
-data <-
-  left_join(data1, data2, by = "nominee")
-
-data <-
-  data %>% 
-  # this makes merging later easier
-  mutate(nominee = as.character(nominee)) 
-
-# calculate indegree in tempdata and merge with data
-tempdata <- data.frame(table(data$nominee))
-
-tempdata <-
-  tempdata %>%
-  rename(
-    # rename the column "Var1" to "nominee" 
-    "nominee" = "Var1", 
-    # rename the column "Freq" to "indegree"
-    "indegree" = "Freq"
-    ) %>% 
-  # makes nominee a character data type, instead of a factor, which can cause problems
-  mutate(nominee = as.character(nominee))
-
-data <- 
-  left_join(data, tempdata, by = "nominee")
-```
-
-**Calculating an Exposure Term**
-
-This is the key step that makes this model - a regression, or linear, model - one that is special. It is creating an exposure term. The idea is that the exposure term "captures" how your interactions with someone, over some period of time (between the first and second time points) impact some outcome. This model accounts for an individual's initial report of the outcome, i.e., their time 1 prior value, so it is a model for *change* in some outcome.
-
-
-```r
-# Calculating exposure
-data <-
-  data %>% 
-  mutate(exposure = relate * yvar1)
-
-# Calculating mean exposure
-mean_exposure <-
-  data %>%
-  group_by(nominator) %>%
-  summarize(exposure_mean = mean(exposure))
-```
-
-What this data frame - `mean_exposure` - contains is the mean of the outcome (in this case, `yvar1`) for all of the individuals the nominator had a relation with.
-
-As we need a final data set with `mean_exposure`,`degree`, `yvar1`, and `yvar2` added, we'll process the data a bit more.
-
-
-```r
-data2 <-
-  data2 %>% 
-  # rename nominee as nominator to merge these
-  rename("nominator" = "nominee") 
-
-final_data <-
-  left_join(mean_exposure, data2, by = "nominator")
-
-final_data <- 
-  # data3 already has nominator, so no need to change
-  left_join(final_data, data3, by = "nominator") 
-```
-
-**Regression (Linear Model)**
-
-Calculating the exposure term is the most distinctive and important step in carrying out influence models. Now, we can simply use a linear model to find out how much relations - as captured by the influence term - affect some outcome.
-
-
-```r
-model1 <-
-  lm(yvar2 ~ yvar1 + exposure_mean, data = final_data)
-
-summary(model1)
-```
-
-```
-## 
-## Call:
-## lm(formula = yvar2 ~ yvar1 + exposure_mean, data = final_data)
-## 
-## Residuals:
-##        1        2        3        4        5        6 
-##  0.02946 -0.09319  0.09429 -0.02730 -0.02548  0.02222 
-## 
-## Coefficients:
-##               Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)    0.11614    0.03445   3.371   0.0434 *  
-## yvar1          0.67598    0.02406  28.092  9.9e-05 ***
-## exposure_mean  0.12542    0.03615   3.470   0.0403 *  
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 0.08232 on 3 degrees of freedom
-## Multiple R-squared:  0.9984,	Adjusted R-squared:  0.9974 
-## F-statistic: 945.3 on 2 and 3 DF,  p-value: 6.306e-05
-```
-
-So, the influence model is used to study a key process for social network analysis, but it is one that is useful, because you can quantify, given what you measure and how you measure it, *the network effect*, something that is sometimes not considered, especially in education (Frank, 2009). It's also fundamentally a regression. That's really it, as the majority of the work goes into calculating the exposure term.
-
-### An Example of Selection
-
-Selection models are also commonly used - and are commonly of interest not only to researchers but also to administrators and teachers (and even to youth and students). 
-
-Here, we briefly describe a few possible approaches for using a selection model.
-
-At its core, the selection model is a regression - albeit, one that is a generalization of one, namely, a logistic regression (sometimes termed a generalized linear model, because it is *basically* a regression but is one with an outcome that consists just of 0's and 1's). Thus, the most straight-away way to use a selection model is to use a logistic regression where all of the relations (note the `relate` variable in `data1` above) are indicated with a 1. But, here is the important and challenging step: all of the *possible relations* (i.e., all of the relations that are possible between all of the individuals in a network) are indicated with a 0 in an edgelist. Note that, again, an edgelist is the preferred data structure for carrying out this analysis. This step involves some data wrangling, especially the idea of widening or lengthening a data frame.
-
-Once all of the relations are indicated with a 1 or a 0, then a simple linear regression can be used. Imagine that we are interested in whether individuals from the *same* group are more or less likely to interact than those from different groups; same could be created in the data frame based upon knowing which group both nominator and nominee are from:
-
-
-```r
-m_selection <- 
-  glm(relate ~ 1 + same, data = edgelist1)
-```
-
-While this is a straightforward way to carry out a selection model, there are some limitations to it. Namely, it does not account for individuals who send more (or less) nominations overall--and not considering this may mean other effects, like the one associated with being from the *same* group, are not accurate. A few extensions of the linear model - including those that can use data for which relationships are indicated with weights, not just 1's and 0's, have been developed. 
-=======
 In this chapter, we used social media data from the #tidytuesday hashtag to prepare and visualize social network data. Sociograms are a useful visualization tool to  reveal who is interacting with whom--and, in some cases, to suggest why. In our applications of data science, we have found that the individuals (such as teachers or students) who are represented in a network often like to see what the network (and the relationships in it) *look like*. It can be compelling to think about why networks are the way they are, and how changes could be made to - for example - foster more connections between individuals who have few opportunities to interact. In this way, social network analysis can be useful to the data scientist in education because it provides a technique to communicate with other educational stakeholders in a compelling way.
->>>>>>> origin/master
 
 Social network analysis is a broad (and growing) domain, and this chapter was intended to present some of its foundation. Fortunately for R users, many recent developments are implemented first in R (e.g., @R-amen). If you are interested in some of the additional steps that you can take to model and analyze network data, consider the appendix on two types of models (for selection and influence processes), [Appendix C](#c20c).

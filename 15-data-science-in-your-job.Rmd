@@ -1,5 +1,5 @@
 ```{r, setup, include=FALSE}
-knitr::opts_chunk$set(fig.align = "center", dpi = 300, fig.width = 5, fig.path = "./man/figures/")
+knitr::opts_chunk$set(fig.align = "center", dpi = 300, fig.height = 5.3, fig.width = 8.5, fig.path = "./man/figures/")
 ```
 # Introducing Data Science Tools To Your Education Job {#c15}
 

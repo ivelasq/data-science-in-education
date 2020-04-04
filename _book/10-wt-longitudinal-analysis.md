@@ -1157,15 +1157,7 @@ high_count %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig10-1-1.png" alt="Count of Female Students in Special Education Over Time" width="1500" />
-=======
-<div class="figure">
-<img src="10-wt-longitudinal-analysis_files/figure-html/fig10-1-1.png" alt="Count of Female Students in Special Education Over Time" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig10-1)Count of Female Students in Special Education Over Time</p>
-</div>
+![(\#fig:fig10-1)Count of Female Students in Special Education Over Time](./man/figures/fig10-1-1.png)
 
 That gives us a plot that has the years in the *x*-axis and a count of female
 students in the *y*-axis. Each line takes a different color based on the state it
@@ -1198,15 +1190,7 @@ high_count %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig10-2-1.png" alt="Count of Male Students in Special Education Over Time" width="1500" />
-=======
-<div class="figure">
-<img src="10-wt-longitudinal-analysis_files/figure-html/fig10-2-1.png" alt="Count of Male Students in Special Education Over Time" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig10-2)Count of Male Students in Special Education Over Time</p>
-</div>
+![(\#fig:fig10-2)Count of Male Students in Special Education Over Time](./man/figures/fig10-2-1.png)
 
 We've looked at each gender separately. What do these lines look like if we
 visualized the total amount of students each year per state? To do that, we'll
@@ -1227,15 +1211,7 @@ high_count %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig10-3-1.png" alt="Total Count of Students in Special Education Over Time" width="1500" />
-=======
-<div class="figure">
-<img src="10-wt-longitudinal-analysis_files/figure-html/fig10-3-1.png" alt="Total Count of Students in Special Education Over Time" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig10-3)Total Count of Students in Special Education Over Time</p>
-</div>
+![(\#fig:fig10-3)Total Count of Students in Special Education Over Time](./man/figures/fig10-3-1.png)
 
 So far we've looked at a few ways to count students over time. In each plot, we
 see that while counts have grown overall for all states, each state has
@@ -1254,15 +1230,7 @@ high_count %>%
   theme_dataedu() 
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig10-4-1.png" alt="Median Students with Disabilities Count" width="1500" />
-=======
-<div class="figure">
-<img src="10-wt-longitudinal-analysis_files/figure-html/fig10-4-1.png" alt="Median Students with Disabilities Count" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig10-4)Median Students with Disabilities Count</p>
-</div>
+![(\#fig:fig10-4)Median Students with Disabilities Count](./man/figures/fig10-4-1.png)
 
 The boxplots show us what we might have expected from our `freqpoly` plots
 before it. The highest median student count over time is California and the
@@ -1313,15 +1281,7 @@ high_count %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig10-5-1.png" alt="Male Student to Female Student Ratio Over Time" width="1500" />
-=======
-<div class="figure">
-<img src="10-wt-longitudinal-analysis_files/figure-html/fig10-5-1.png" alt="Male Student to Female Student Ratio Over Time" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig10-5)Male Student to Female Student Ratio Over Time</p>
-</div>
+![(\#fig:fig10-5)Male Student to Female Student Ratio Over Time](./man/figures/fig10-5-1.png)
 
 By visually inspecting, we can hypothesize that there was no significant change
 in the male to female ratio between the years 2012 and 2017. But very often we
@@ -1392,15 +1352,7 @@ child_counts %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig10-6-1.png" alt="Comparison of Female Students to Male Students in Special Education" width="1500" />
-=======
-<div class="figure">
-<img src="10-wt-longitudinal-analysis_files/figure-html/fig10-6-1.png" alt="Comparison of Female Students to Male Students in Special Education" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig10-6)Comparison of Female Students to Male Students in Special Education</p>
-</div>
+![(\#fig:fig10-6)Comparison of Female Students to Male Students in Special Education](./man/figures/fig10-6-1.png)
 
 If you think of each potential point on the linear regression line as a ratio of
 male to female students, you'll notice that we don't know a whole lot about what
@@ -1457,15 +1409,7 @@ child_counts %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig10-7-1.png" alt="Comparison of Female Students to Male Students with Disabilities" width="1500" />
-=======
-<div class="figure">
-<img src="10-wt-longitudinal-analysis_files/figure-html/fig10-7-1.png" alt="Comparison of Female Students to Male Students with Disabilities" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig10-7)Comparison of Female Students to Male Students with Disabilities</p>
-</div>
+![(\#fig:fig10-7)Comparison of Female Students to Male Students with Disabilities](./man/figures/fig10-7-1.png)
 
 This should allow us to fit a better model for the relationship between male and
 female student counts, albeit only the ones where the count of female students
@@ -1530,15 +1474,7 @@ ggplot(data = model_data, aes(x = year, y = ratio)) +
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig10-8-1.png" alt="Male to Female Ratio Across Years (Jittered)" width="1500" />
-=======
-<div class="figure">
-<img src="10-wt-longitudinal-analysis_files/figure-html/fig10-8-1.png" alt="Male to Female Ratio Across Years (Jittered)" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig10-8)Male to Female Ratio Across Years (Jittered)</p>
-</div>
+![(\#fig:fig10-8)Male to Female Ratio Across Years (Jittered)](./man/figures/fig10-8-1.png)
 
 Each year seems to have data points that can be considered when we fit the
 model. This means that there are enough data points to help us learn how the
@@ -1590,11 +1526,6 @@ summary(ratio_year)
 ## F-statistic: 0.8241 on 5 and 335 DF,  p-value: 0.5332
 ```
 
-<<<<<<< HEAD
-Here's how we can interpret the `Estimate` column: The estimate of the `(Intercept)` is 2.03356, which is the estimated value of the `ratio` variable when the `year` variable is "2012". Note that the value `year2012` isn't present in the in the list of rownames. That's because the `(Intercept)` row represents `year2012`. In linear regression models that use factor variables as predictors, the first level of the factor is the intercept. Sometimes this level is called a "dummy variable". The remaining rows of the model output show how much each year differs from the intercept, 2012. For example, `year2013` has an estimate of -0.01205, which suggests that on average the value of `ratio` is .01205 less than 2.03356. On average, the ratio of `year2014` is .02372 less than 2.03356. The `t value` column tells us the size of difference between the estimated value of the ratio for each year and the estimated value of the ratio of the intercept. Generally speaking, the larger the t value, the larger the chance that any difference between the coefficient of a factor level and the intercept are significant. 
-
-Though the relationship between `year` as a predictor of `ratio` is not linear (recall our previous plot), the linear regression model still gives us useful information. We fit a linear regression model to a factor variable, like `year`, as a predictor of a continuous variable, like`ratio`. In doing so, we got the average `ratio` at every value of `year`. We can verify this by taking the mean `ratio` of ever `year`: 
-=======
 Here's how we can interpret the `Estimate` column: The estimate of the
 `(Intercept)` is 2.03, which is the estimated value of the `ratio` variable
 when the `year` variable is "2012". Note that the value `year2012` isn't present
@@ -1617,7 +1548,6 @@ information. We fit a linear regression model to a factor variable, like `year`,
 as a predictor of a continuous variable, like`ratio`. In doing so, we got the
 average `ratio` at every value of `year`. We can verify this by taking the mean
 `ratio` of ever `year`: 
->>>>>>> origin/master
 
 
 ```r
@@ -1727,15 +1657,7 @@ model_data %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig10-9-1.png" alt="Median Male and Female Student Counts in Special Education" width="1500" />
-=======
-<div class="figure">
-<img src="10-wt-longitudinal-analysis_files/figure-html/fig10-9-1.png" alt="Median Male and Female Student Counts in Special Education" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig10-9)Median Male and Female Student Counts in Special Education</p>
-</div>
+![(\#fig:fig10-9)Median Male and Female Student Counts in Special Education](./man/figures/fig10-9-1.png)
 
 Once we learned from our model that male to female ratios did not change in any
 meaningful way from 2012 to 2017 and that the median ratio across states was

@@ -21,6 +21,6 @@ bookdown::gitbook:
       link: https://github.com/data-edu/data-science-in-education/edit/master/%s
 bookdown::word_document2:
   toc: yes
-  fontfamily: serif
+  fontfamily: TimesNewRoman
   fig_height: 5.3
   fig_width: 8.5

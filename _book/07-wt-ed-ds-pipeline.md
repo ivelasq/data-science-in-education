@@ -1242,15 +1242,7 @@ students %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig7-1-1.png" alt="Example Plot" width="1500" />
-=======
-<div class="figure">
-<img src="07-wt-ed-ds-pipeline_files/figure-html/fig7-1-1.png" alt="Example Plot" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig7-1)Example Plot</p>
-</div>
+![(\#fig:fig7-1)Example Plot](./man/figures/fig7-1-1.png)
 
 The `data` argument in the first line tells R we’ll be using the dataset called
 `students`. The `aes` argument tells R we’ll be using values from the
@@ -1287,15 +1279,7 @@ dat %>%
        y = "Final Grade")
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig7-2-1.png" alt="Percentage Earned vs. Time Spent" width="1500" />
-=======
-<div class="figure">
-<img src="07-wt-ed-ds-pipeline_files/figure-html/fig7-2-1.png" alt="Percentage Earned vs. Time Spent" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig7-2)Percentage Earned vs. Time Spent</p>
-</div>
+![(\#fig:fig7-2)Percentage Earned vs. Time Spent](./man/figures/fig7-2-1.png)
 
 _Note: you may receive a warning that reads `Warning message: Removed 5 rows containing missing values (geom_point).` This is due to the `NA` values that were introduced through coercion earlier in this walkthrough, and are not a cause for alarm!_
 
@@ -1316,15 +1300,7 @@ dat %>%
        y = "Final Grade")
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig7-3-1.png" alt="Adding a Line of Best Fit" width="1500" />
-=======
-<div class="figure">
-<img src="07-wt-ed-ds-pipeline_files/figure-html/fig7-3-1.png" alt="Adding a Line of Best Fit" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig7-3)Adding a Line of Best Fit</p>
-</div>
+![(\#fig:fig7-3)Adding a Line of Best Fit](./man/figures/fig7-3-1.png)
 
 Looking at this plot, it appears that the more time students spent on the
 course, the higher that there final grade is. 

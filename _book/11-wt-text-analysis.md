@@ -321,15 +321,7 @@ pos_tokens_count %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig11-1-1.png" alt="Count of Words Associated with Positivity" width="1500" />
-=======
-<div class="figure">
-<img src="11-wt-text-analysis_files/figure-html/fig11-1-1.png" alt="Count of Words Associated with Positivity" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig11-1)Count of Words Associated with Positivity</p>
-</div>
+![(\#fig:fig11-1)Count of Words Associated with Positivity](./man/figures/fig11-1-1.png)
 
 Note the use of `reorder()` when mapping the `word` variable to the x aesthetic. Using `reorder()` here sorts our x axis in descending order by the variable `n`. Sorting the bars from highest frequency to lowest makes it easier for the reader to identify and compare the most and least common words in the visualization. 
 
@@ -526,7 +518,7 @@ sample(x = 1:10, size = 5)
 ```
 
 ```
-## [1]  4  2  9  3 10
+## [1]  7  6  8  1 10
 ```
 
 Passing `sample()` a vector of numbers and the size of the sample you want returns a random selection from the vector. Try changing the value of `x` and `size` to see how this works. 

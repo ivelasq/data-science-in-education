@@ -116,29 +116,16 @@ tibble(
 ## # A tibble: 10 x 3
 ##    student school test_score
 ##    <chr>   <chr>       <int>
-<<<<<<< HEAD
-##  1 a       k              38
-##  2 b       l              80
+##  1 a       k              36
+##  2 b       l              77
 ##  3 c       m              20
-##  4 d       n              31
-##  5 e       o             100
-##  6 f       k              12
-##  7 g       l              21
-##  8 h       m               7
-##  9 i       n              75
-## 10 j       o              64
-=======
-##  1 a       k              49
-##  2 b       l              62
-##  3 c       m              23
-##  4 d       n              38
-##  5 e       o              63
-##  6 f       k              99
-##  7 g       l              32
-##  8 h       m              60
-##  9 i       n              83
-## 10 j       o              21
->>>>>>> origin/master
+##  4 d       n              39
+##  5 e       o              38
+##  6 f       k               2
+##  7 g       l              11
+##  8 h       m              59
+##  9 i       n              17
+## 10 j       o               7
 ```
 
 Aggregate data totals up a variable - the variable `test_score` in this case - to
@@ -161,19 +148,11 @@ tibble(
 ## # A tibble: 5 x 2
 ##   school mean_score
 ##   <chr>       <dbl>
-<<<<<<< HEAD
-## 1 k              16
-## 2 l              65
-## 3 m              14
-## 4 n              46
-## 5 o              69
-=======
-## 1 k            83  
-## 2 l            31.5
-## 3 m            27  
-## 4 n            44.5
-## 5 o            38
->>>>>>> origin/master
+## 1 k            68.5
+## 2 l            68  
+## 3 m            48.5
+## 4 n            47  
+## 5 o            89
 ```
 
 Notice here that this dataset no longer identifies individual students.
@@ -594,10 +573,7 @@ district_tidy_df %>%
   theme(legend.position = "none")
 ```
 
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig9-1-1.png" alt="Percentage of Population by Subgroup" width="1500" />
-<p class="caption">(\#fig:fig9-1)Percentage of Population by Subgroup</p>
-</div>
+![(\#fig:fig9-1)Percentage of Population by Subgroup](./man/figures/fig9-1-1.png)
 
 When we look at these data, the district looks very diverse. Almost **40% of
 students are Black** and around **36% are White**. Note that this matches the percentages provided in the original PDF's. This shows our calculations above were accurate. Hooray!
@@ -646,10 +622,7 @@ district_merged_df %>%
   theme_dataedu()
 ```
 
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig9-2-1.png" alt="Count of Schools by White Population" width="1500" />
-<p class="caption">(\#fig:fig9-2)Count of Schools by White Population</p>
-</div>
+![(\#fig:fig9-2)Count of Schools by White Population](./man/figures/fig9-2-1.png)
 
 **26 of the 74 (35%) of schools have between 0-10% White students.** This
 implies that even though the school district may be diverse, the demographics
@@ -695,10 +668,7 @@ district_tidy_df %>%
   theme(legend.position = "none")
 ```
 
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig9-3-1.png" alt="Distribution of Subgroups in High Poverty Schools" width="1500" />
-<p class="caption">(\#fig:fig9-3)Distribution of Subgroups in High Poverty Schools</p>
-</div>
+![(\#fig:fig9-3)Distribution of Subgroups in High Poverty Schools](./man/figures/fig9-3-1.png)
 
 **8% of White students** attend high poverty schools, compared to **43% of Black
 students, 39% of Hispanic students, 28% of Asian students, and 45% of Native
@@ -724,10 +694,7 @@ district_merged_df %>%
   theme(legend.position = "none")
 ```
 
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig9-4-1.png" alt="FRPL Percentage vs. White Percentage" width="1500" />
-<p class="caption">(\#fig:fig9-4)FRPL Percentage vs. White Percentage</p>
-</div>
+![(\#fig:fig9-4)FRPL Percentage vs. White Percentage](./man/figures/fig9-4-1.png)
 
 Similar to the result in Creating Categories, there is a strong negative correlation between FRPL
 percentage and the percentage of White students in a school. That is, high

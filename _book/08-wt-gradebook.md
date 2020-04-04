@@ -288,15 +288,7 @@ gradebook %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig8-1-1.png" alt="Bar Graph of Student Grades" width="1500" />
-=======
-<div class="figure">
-<img src="08-wt-gradebook_files/figure-html/fig8-1-1.png" alt="Bar Graph of Student Grades" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig8-1)Bar Graph of Student Grades</p>
-</div>
+![(\#fig:fig8-1)Bar Graph of Student Grades](./man/figures/fig8-1-1.png)
 
 Using {ggplot2}, we can create many types of graphs. Using our `classwork_df` from earlier, we can see the distribution of scores and how they differ from classwork to classwork using boxplots. We are able to do this because we have made the `classworks` and `scores` columns into tidy formats.
 
@@ -321,15 +313,7 @@ classwork_df %>%
     )
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig8-2-1.png" alt="Distribution of Classwork Scores" width="1500" />
-=======
-<div class="figure">
-<img src="08-wt-gradebook_files/figure-html/fig8-2-1.png" alt="Distribution of Classwork Scores" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig8-2)Distribution of Classwork Scores</p>
-</div>
+![(\#fig:fig8-2)Distribution of Classwork Scores](./man/figures/fig8-2-1.png)
 
 ### Model Data
 
@@ -359,15 +343,7 @@ gradebook %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig8-3-1.png" alt="Relationship Between Overall Grade and Formative Assessments" width="1500" />
-=======
-<div class="figure">
-<img src="08-wt-gradebook_files/figure-html/fig8-3-1.png" alt="Relationship Between Overall Grade and Formative Assessments" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig8-3)Relationship Between Overall Grade and Formative Assessments</p>
-</div>
+![(\#fig:fig8-3)Relationship Between Overall Grade and Formative Assessments](./man/figures/fig8-3-1.png)
 
 We can layer different types of plots on top of each other in {ggplot2}. Here the scatterplot is layered with a line of best fit, suggesting a positive linear relationship.
 
@@ -388,15 +364,7 @@ gradebook %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig8-4-1.png" alt="Relationship Between Overall Grade and Formative Assessments (with Line of Best Fit)" width="1500" />
-=======
-<div class="figure">
-<img src="08-wt-gradebook_files/figure-html/fig8-4-1.png" alt="Relationship Between Overall Grade and Formative Assessments (with Line of Best Fit)" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig8-4)Relationship Between Overall Grade and Formative Assessments (with Line of Best Fit)</p>
-</div>
+![(\#fig:fig8-4)Relationship Between Overall Grade and Formative Assessments (with Line of Best Fit)](./man/figures/fig8-4-1.png)
 
 **Outliers**
 
@@ -416,15 +384,7 @@ gradebook %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig8-5-1.png" alt="Distribution of Formative Assessment Scores" width="1500" />
-=======
-<div class="figure">
-<img src="08-wt-gradebook_files/figure-html/fig8-5-1.png" alt="Distribution of Formative Assessment Scores" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig8-5)Distribution of Formative Assessment Scores</p>
-</div>
+![(\#fig:fig8-5)Distribution of Formative Assessment Scores](./man/figures/fig8-5-1.png)
 
 
 ```r
@@ -440,15 +400,7 @@ gradebook %>%
   theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig8-6-1.png" alt="Distribution of Overall Grade Scores" width="1500" />
-=======
-<div class="figure">
-<img src="08-wt-gradebook_files/figure-html/fig8-6-1.png" alt="Distribution of Overall Grade Scores" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig8-6)Distribution of Overall Grade Scores</p>
-</div>
+![(\#fig:fig8-6)Distribution of Overall Grade Scores](./man/figures/fig8-6-1.png)
 
 ### Correlation Analysis
 

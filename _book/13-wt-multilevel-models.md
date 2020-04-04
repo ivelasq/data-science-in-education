@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-# Walkthrough 7: The Role (and Usefulness) of Multi-Level Models {#c13}
-=======
 # Walkthrough 7: The Role (and Usefulness) of Multilevel Models {#c13}
 
 ## Topics Emphasized
@@ -16,7 +13,6 @@
 - `dplyr::bind_cols()`
 - `lme4::lmer()`
 - `performance::icc()`
->>>>>>> origin/master
 
 ## Vocabulary
 
@@ -123,34 +119,6 @@ get.dummy(d_iris, name = "Species") %>%
 ```
 
 ```
-<<<<<<< HEAD
-## Warning in model.matrix.default(~x - 1, model.frame(~x - 1), contrasts = FALSE):
-## non-list contrasts argument ignored
-```
-
-```
-##      {\n    args = commandArgs(TRUE)\n    bookdown:::source_utf8(args[4])\n    out = do.call(rmarkdown::render, c(args[1], readRDS(args[2]), list(run_pandoc = FALSE, encoding = "UTF-8")))\n    bookdown:::source_utf8(args[5])\n    out_expected = xfun::with_ext(args[1], ".md")\n    if (out != out_expected) {\n        file.rename(out, out_expected)\n        attributes(out_expected) = attributes(out)\n        out = out_expected\n    }\n    if (file.exists(args[3])) {\n        res = readRDS(args[3])\n        res[[args[1]]] = out\n        saveRDS(res, args[3])\n    }\n    else saveRDS(setNames(list(out), args[1]), args[3])\n}setosa
-## [1,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    1
-## [2,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    1
-## [3,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    1
-## [4,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    1
-## [5,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    1
-## [6,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    1
-##      {\n    args = commandArgs(TRUE)\n    bookdown:::source_utf8(args[4])\n    out = do.call(rmarkdown::render, c(args[1], readRDS(args[2]), list(run_pandoc = FALSE, encoding = "UTF-8")))\n    bookdown:::source_utf8(args[5])\n    out_expected = xfun::with_ext(args[1], ".md")\n    if (out != out_expected) {\n        file.rename(out, out_expected)\n        attributes(out_expected) = attributes(out)\n        out = out_expected\n    }\n    if (file.exists(args[3])) {\n        res = readRDS(args[3])\n        res[[args[1]]] = out\n        saveRDS(res, args[3])\n    }\n    else saveRDS(setNames(list(out), args[1]), args[3])\n}versicolor
-## [1,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0
-## [2,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0
-## [3,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0
-## [4,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0
-## [5,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0
-## [6,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0
-##      {\n    args = commandArgs(TRUE)\n    bookdown:::source_utf8(args[4])\n    out = do.call(rmarkdown::render, c(args[1], readRDS(args[2]), list(run_pandoc = FALSE, encoding = "UTF-8")))\n    bookdown:::source_utf8(args[5])\n    out_expected = xfun::with_ext(args[1], ".md")\n    if (out != out_expected) {\n        file.rename(out, out_expected)\n        attributes(out_expected) = attributes(out)\n        out = out_expected\n    }\n    if (file.exists(args[3])) {\n        res = readRDS(args[3])\n        res[[args[1]]] = out\n        saveRDS(res, args[3])\n    }\n    else saveRDS(setNames(list(out), args[1]), args[3])\n}virginica
-## [1,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       0
-## [2,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       0
-## [3,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       0
-## [4,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       0
-## [5,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       0
-## [6,]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       0
-=======
 ##   Speciessetosa Speciesversicolor Speciesvirginica
 ## 1             1                 0                0
 ## 2             1                 0                0
@@ -158,7 +126,6 @@ get.dummy(d_iris, name = "Species") %>%
 ## 4             1                 0                0
 ## 5             1                 0                0
 ## 6             1                 0                0
->>>>>>> origin/master
 ```
 
 Let's confirm that every row associated with a specific species has a 1 in the
@@ -171,22 +138,8 @@ Now we need to combine the dummy-coded variables with the `iris` dataset. `bind_
 
 ```r
 # create matrix of dummy-coded variables
-<<<<<<< HEAD
-species_dummy_coded <- dummies::dummy(iris$Species)
-```
-
-```
-## Warning in model.matrix.default(~x - 1, model.frame(~x - 1), contrasts = FALSE):
-## non-list contrasts argument ignored
-```
-
-```r
-# convert matrix to tibble so we can use tidyverse functions
-species_dummy_coded <- as_tibble(species_dummy_coded)
-=======
 species_dummy_coded <- 
   get.dummy(d_iris, name = "Species")
->>>>>>> origin/master
 
 # add dummy coded variables to iris
 iris_with_dummy_codes <- 

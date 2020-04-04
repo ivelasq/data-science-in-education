@@ -310,15 +310,9 @@ nearZeroVar(df, saveMetrics = TRUE)
 ## negemo            13.000000    90.7327586   FALSE FALSE
 ## n                  1.333333    10.1293103   FALSE FALSE
 ```
-<<<<<<< HEAD
-After conducting our zero variance check, we want to scan the `zeroVar` column to see if any of our variables failed this check. If we see any "TRUE" values for `zeroVar`, that means we should look more closely at that variable.
-
-In the nearZeroVar() function we just ran, we see a result in the ZeroVar column of "TRUE" for the `enrollment_status` variable.  If we look at `enrollment_status`, we will see that it is "Approved/Enrolled" for *all* of the students.  When we use variables with no variability in certain models, it may cause some problems, and so we remove it first.
-=======
 After conducting our zero variance check, we want to scan the `zeroVar` column to see if any of our variables failed this check. If we see any `TRUE` values for `zeroVar`, that means we should look more closely at that variable.
 
 In the nearZeroVar() function we just ran, we see a result in the ZeroVar column of `TRUE` for the `enrollment_status` variable.  If we look at `enrollment_status`, we will see that it is "Approved/Enrolled" for *all* of the students. Using variables with no variability in certain models may cause problems, and so we remove them first.
->>>>>>> origin/master
 
 
 ```r
@@ -791,15 +785,7 @@ varImp(rf_fit2_imp) %>%
     theme_dataedu()
 ```
 
-<<<<<<< HEAD
-<div class="figure" style="text-align: center">
-<img src="./man/figures/fig14-1-1.png" alt="Variable Importance" width="1500" />
-=======
-<div class="figure">
-<img src="14-wt-machine-learning_files/figure-html/fig14-1-1.png" alt="Variable Importance" width="672" />
->>>>>>> origin/master
-<p class="caption">(\#fig:fig14-1)Variable Importance</p>
-</div>
+![(\#fig:fig14-1)Variable Importance](./man/figures/fig14-1-1.png)
 
 Cool! We can now visualize which variables are most important in predicting final grade. 
 
