@@ -2,30 +2,63 @@
 
 # Walkthrough 1: The Education Data Science Pipeline With Online Science Class Data {#c07}
 
-## Introduction to the walkthroughs
+## Topics Emphasized
 
-This chapter is the first of eight walkthroughs included in the book. In it, we
-present *one approach* to analyzing a specific dataset. In this chapter, the
-approach is what we call the "education data science pipeline." Here, we will be
-using data from a number of online science classes and will show the process of
-working with an education dataset from start to finish. While the walkthroughs
-are very different, the structure and section headings will be consistent
-throughout the walkthroughs. For example, every walkthrough will begin with a
-vocabulary section, followed by an introduction to the dataset and an
-introduction to the question or problem explored in the walkthrough.
+For this and the remaining walkthroughs, we refer to the topics emphasized in terms of distinct but related 
+steps involved in the process of data science. In this book, we use the six steps - described in detail 
+in [Chapter 3](#c03) - from @grolemund2018's depiction of the proces.
+
+As mentioned in [Chapter 5](#c05), then, the topics emphasized are those that are the *particular* focus of each chapter; most of the walkthroughs contain some element of all of the five aspects, but all have specific emphases.
+
+For this chapter on the educaton data science pipeline, those emphases are:
+
+- Tidying data 
+- Transforming data
+
+## Functions Introduced
+
+- `data.frame()`
+- `dplyr::summarize()`
+- `tidyr::pivot_longer() and tidyr::pivot_wider()`
+- `tidyr::left_join()`, `tidyr::right_join()`, `tidyr::semi_join()`, and `tidyr::anti_join()`
+- `lm()`
+- `ggplot2::ggplot()`
+- `apaTables::apa.cor.table()`
+- `sjPlot::tab_model()`
 
 ## Vocabulary
 
+In this section (here and in the other walkthrough sections), we include key terms that are introduced and used in the chapter.
+
+  - data frame
   - item
   - joins
   - keys
   - log-trace data
-  - pass
+  - passed arguments
   - reverse scale
   - regression
   - survey
   - tibble
   - vectorize
+
+## Introduction to the Walkthroughs
+
+This chapter is the first of eight walkthroughs included in the book. In it, we
+present *one approach* to analyzing a specific dataset. In this chapter, the
+approach is what we refer to as the *education data science pipeline*, orsome  the steps taken in many data science projects, including cleaning and tidying data as well as exploring and visualizing or modeling it.
+
+Here, we will be using data from a number of online science classes and will show the process of
+working with an education dataset from start to finish. While the walkthroughs
+are very different, the structure and section headings will be consistent
+throughout the walkthroughs. For example, every walkthrough will begin with a
+vocabulary section, followed by an introduction to the dataset and an
+introduction to the question or problem explored in the walkthrough. 
+
+We note that this chapter assumes familiarity with the four core concepts that 
+comprise the foundational skills framework: projects, functions, packages, and data. If you would 
+like a refresher about (or an introduction to) any of those, the foundational skills chapter, 
+then reading and writing and running some of the code in the previous chapter [Chapter 6](#06) may be helpful to you.
 
 ## Chapter Overview
 
@@ -61,7 +94,7 @@ Our high-level *purpose* for this walkthrough is to conduct an analysis that
 helps explain students' performance in these online courses. The *problem* we
 are facing is a very common one when it comes to data science in education: the
 data are complex and in need of further processing before we can get to the step
-of running analyses.
+of running analyses. We will use this same dataset in the final walkthrough [Walkthrough 8/Chapter 14](#c14), and we will provide more details there about the dataset and the context. 
 
 To understand students' performance, we will focus on a learning management
 system (LMS) variable that indicates the amount of time students spent within
@@ -83,7 +116,7 @@ using survey questions. The three motivation measures we explore here come from
 Expectancy-Value Theory, which states that students are motivated to learn when
 they both believe that they can achieve something (expectancy, also known as
 perceived competence) and believe that the concept they are trying to learn is
-important (value) [@eccles1983]. There are multiple types of value, but we
+important (value) [@wigfield2000]. There are multiple types of value, but we
 explore two of them here: interest and utility value. Utility value is the
 degree to which a person is able to connect the concept being learned with
 something they will utilize in their future life. This survey included the
@@ -133,7 +166,7 @@ walkthrough. More information about analyzing text data can be found in
 
 In this walkthrough, we will concentrate on merging different datasets together
 by using the different "joins" available in the {dplyr} package. We will also
-start exploring how to run linear models in R.
+start exploring how to run linear models in R. 
 
 ## Load Packages
 
@@ -145,14 +178,42 @@ will help us organize the structure of the data using the {tidyverse}
 [@R-lubridate], create formatted tables using {apaTables} [@R-apaTables] and
 {sjPlot} [@R-sjPlot], and export datasets using {readxl} [@R-readxl].
 
+***Install packages (if necessary)***
+
+If you have not installed any of these packages before, you will need to do so 
+before loading them (if you run the code below *prior* to installing the packages, you 
+should see a message indicating that the package is not available). If you have installed 
+these before, then you can skip this step.
+
+You can install a single 
+package, such as the {tidyverse} package, as follows:
+
 
 ```r
-library(dataedu)
+install.packages("tidyverse")
+```
+
+If you must install two or more packages, you can do so in a single call to the `install.packages()` 
+function; the names of the packages must be provided to the function as follows:
+
+
+```r
+install.packages(c("tidyverse", "lubridate"))
+```
+
+When you're installing a package for the first time (which may be needed for the other walkthrough chapters, as well), you will need to take these same steps, first. 
+The good news is that you only need to install a package *once*, after which you can simply load it using `library()` (as below).
+
+More on the installation of packages is included in the [Packages section](#c06p) of [Chapter 6](#c06). 
+
+
+```r
 library(tidyverse)
 library(lubridate)
 library(apaTables)
 library(sjPlot)
 library(readxl)
+library(dataedu)
 ```
 
 ## Import Data
@@ -304,10 +365,14 @@ used `mutate_at()` to convert the data in all ten variables into a numeric
 format.
 
 To learn a little more about `mutate()`, try the example below, where we create
-a new dataset called "df". We fill this dataset with two columns: "male" and
+a new data frame called "df". A data frame is a two-dimensional structure that stores tables. The table has a header and data rows and each cell stores values. 
+
+We fill this data frame with two columns: "male" and
 "female." Each column has only one value, and that value is 5. In the second
 part of the code, we add a `total_students` column by adding the number of
 `male` students and `female` students.
+
+Note that we create the dataset with `tibble()`, which is from the {tibble} package included in the tidyverse. A tibble is a special type of data frame that makes working with the tidy data a little easier. More information is available in R for Data Science [@grolemund2018].
 
 
 ```r
@@ -678,6 +743,8 @@ str_sub("_99888_1", start = 2, end = -3)
 ## [1] "99888"
 ```
 
+_Note: you may receive a warning telling you that `NA` values were introduced by coercion. This happens when we change data types, and we will overlook this warning message for the purposes of this walkthrough._
+
 We can apply this process to our data using `mutate()`. We convert the string
 into a number using `as.numeric()` in the next portion of the code. This step is
 important so the data can be joined to the other, numeric `student_id` variables
@@ -992,8 +1059,8 @@ glimpse(dat)
 ```
 
 ```
-## Observations: 40,348
-## Variables: 22
+## Rows: 40,348
+## Columns: 22
 ## $ course_id       <chr> "AnPhA-S116-01", "AnPhA-S116-01", "AnPhA-S116-01", "A…
 ## $ subject         <chr> "AnPhA", "AnPhA", "AnPhA", "AnPhA", "AnPhA", "AnPhA",…
 ## $ semester        <chr> "S116", "S116", "S116", "S116", "S116", "S116", "S116…
@@ -1043,7 +1110,7 @@ TRUE`. For the sake of making it simple to view the output, we will omit this
 argument for now.
 
 Were we to run `distinct(dat, Gradebook_Item)`, what do you think would be
-returned? Running the following code returns a one-column dataframe that lists the names of
+returned? Running the following code returns a one-column data frame that lists the names of
 every distinct gradebook item.
  
 
@@ -1095,7 +1162,7 @@ distinct(dat, course_id, Gradebook_Item)
 ## # … with 1,259 more rows
 ```
 
-The dataframe we get when we run the code chunk above yields a much longer (more
+The data frame we get when we run the code chunk above yields a much longer (more
 observations) dataset. Thus, it looks like *a lot* of gradebook items were
 repeated across courses - likely across the different sections of the same
 course. If you'd like, you can continue to investigate this: we would be curious
@@ -1175,8 +1242,13 @@ students %>%
   theme_dataedu()
 ```
 
+<<<<<<< HEAD
 <div class="figure" style="text-align: center">
 <img src="./man/figures/fig7-1-1.png" alt="Example Plot" width="1500" />
+=======
+<div class="figure">
+<img src="07-wt-ed-ds-pipeline_files/figure-html/fig7-1-1.png" alt="Example Plot" width="672" />
+>>>>>>> origin/master
 <p class="caption">(\#fig:fig7-1)Example Plot</p>
 </div>
 
@@ -1184,9 +1256,17 @@ The `data` argument in the first line tells R we’ll be using the dataset calle
 `students`. The `aes` argument tells R we’ll be using values from the
 `school_id` column for the x-axis and values from the `mean_score` column for
 the y-axis. In the second line, the `geom_bar` function tells R we’ll drawing
-the graph using the bar chart format. Each line of ggplot code is connected by a
-`+` at the end to tell R the next line of code is an additional ggplot layer to
+the graph using the bar chart format. Each line of {ggplot2} code is connected by a
+`+` at the end to tell R the next line of code is an additional {ggplot2} layer to
 add.
+
+Writing code is like writing essays. There's a range of acceptable styles and certainly you can practice unusual ways of writing, but other people will find it harder to understand what you want to say. In this book, you'll see variations in {ggplot2} style, but all within what we believe is the range of acceptable conventions. Here are some examples: 
+
+ - Piping data to `ggplot()` using `%>%` vs including it as an argument in `ggplot()` 
+ - Using `ggtitle()` for labels vs using `labs()` 
+ - Order of `ggplot()` levels 
+
+It's ok if those terms are new to you. The main point is there are multiple ways to make the plot you want. You'll see that in this book and in other peoples' code. As you learn, we encourage you to practice empathy and think about how well your code conveys your ideas to other people, including yourself when you look at it many weeks from when you wrote it. 
 
 ### The Relationship between Time Spent on Course and Final Grade
 
@@ -1203,14 +1283,21 @@ dat %>%
   # Creates a point with x- and y-axis coordinates specified above
   geom_point(color = dataedu_colors("green")) + 
   theme_dataedu() +
-  xlab("Time Spent") +
-  ylab("Final Grade")
+  labs(x = "Time Spent",
+       y = "Final Grade")
 ```
 
+<<<<<<< HEAD
 <div class="figure" style="text-align: center">
 <img src="./man/figures/fig7-2-1.png" alt="Percentage Earned vs. Time Spent" width="1500" />
+=======
+<div class="figure">
+<img src="07-wt-ed-ds-pipeline_files/figure-html/fig7-2-1.png" alt="Percentage Earned vs. Time Spent" width="672" />
+>>>>>>> origin/master
 <p class="caption">(\#fig:fig7-2)Percentage Earned vs. Time Spent</p>
 </div>
+
+_Note: you may receive a warning that reads `Warning message: Removed 5 rows containing missing values (geom_point).` This is due to the `NA` values that were introduced through coercion earlier in this walkthrough, and are not a cause for alarm!_
 
 There appears to be *some* relationship. What if we added a line of best fit - a
 linear model? The code below is the same plot we just made, but it includes the
@@ -1225,12 +1312,17 @@ dat %>%
   # method = "lm" tells ggplot2 to fit the line using linear regression
   geom_smooth(method = "lm") +
   theme_dataedu() +
-  xlab("Time Spent") +
-  ylab("Final Grade")
+  labs(x = "Time Spent",
+       y = "Final Grade")
 ```
 
+<<<<<<< HEAD
 <div class="figure" style="text-align: center">
 <img src="./man/figures/fig7-3-1.png" alt="Adding a Line of Best Fit" width="1500" />
+=======
+<div class="figure">
+<img src="07-wt-ed-ds-pipeline_files/figure-html/fig7-3-1.png" alt="Adding a Line of Best Fit" width="672" />
+>>>>>>> origin/master
 <p class="caption">(\#fig:fig7-3)Adding a Line of Best Fit</p>
 </div>
 
